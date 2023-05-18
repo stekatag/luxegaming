@@ -3,17 +3,16 @@
 // Sticky navigation
 const sectionHeroEl = document.querySelector(".section-hero");
 const logoEl = document.querySelector(".logo");
+const wrapperEl = document.querySelector(".wrapper");
 
 const obs = new IntersectionObserver(
   function (entries) {
     const [ent] = entries;
 
     if (!ent.isIntersecting) {
-      document.body.classList.add("sticky");
-      // logoEl.src = "img/justGo-logo-dark.png";
+      wrapperEl.classList.add("sticky");
     } else {
-      document.body.classList.remove("sticky");
-      // logoEl.src = "img/justGo-logo-light.png";
+      wrapperEl.classList.remove("sticky");
     }
   },
   {

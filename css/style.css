@@ -37,6 +37,12 @@ html {
     html {
       font-size: 68.75%; } }
 
+body {
+  overflow-x: hidden; }
+
+.wrapper {
+  position: relative; }
+
 .container {
   max-width: 140rem;
   margin: 0 auto;
@@ -462,7 +468,7 @@ em {
       position: relative;
       z-index: 1000; } }
   .sticky > .header-area .header {
-    height: 8rem; }
+    height: 8.5rem; }
   .header__logo {
     height: 6rem; }
   .sticky > .header-area .header__logo {
