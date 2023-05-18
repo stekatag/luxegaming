@@ -35,7 +35,12 @@
 
   &__info {
     display: grid;
+    grid-template-columns: 75fr 25fr;
     padding: 2.4rem;
+
+    .card-title {
+      height: 5rem;
+    }
   }
 
   &__btn:link,

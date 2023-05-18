@@ -20,12 +20,16 @@
     font-weight: 400;
     color: $color-grey-light-2;
     margin-bottom: 1.6rem;
+
+    @include respond(phone) {
+      margin-top: 1.8rem;
+    }
   }
 
   &__description {
     font-size: 1.5rem;
     line-height: 1.8;
-    color: $color-grey-light-2;
+    color: $color-grey-light-1;
     margin-bottom: 6.4rem;
 
     @include respond(tab-port) {
@@ -93,6 +97,13 @@
   .search-form {
     @include respond(tab-port) {
       margin: 0 auto;
+    }
+
+    @include respond(small-phone) {
+      &__btn {
+        position: static;
+        margin-top: 1.4rem;
+      }
     }
   }
 }

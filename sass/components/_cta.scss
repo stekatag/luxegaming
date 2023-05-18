@@ -3,6 +3,14 @@
   background-color: $color-grey-light-1;
   border-radius: $default-border-radius;
 
+  @include respond(phone) {
+    padding: 5.5rem;
+  }
+
+  @include respond(small-phone) {
+    padding: 3.2rem;
+  }
+
   .heading-secondary {
     margin-bottom: 3.8rem;
 

@@ -7,13 +7,15 @@
 
 // MEDIA QUERY MANAGER
 /*
-0 - 600px: Phone
+0 - 340px: Small Phone
+340px - 600px: Phone
 600 - 900px: Tablet
 900 - 1100px: Tablet Landscape
 1100 - 1800px: Normal styles apply
 1800px +: Large Desktop
 
 $breakpoint argument choices:
+- small-phone
 - phone
 - tab-port
 - tab-land
@@ -24,7 +26,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em - 16px
 */
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 21.25em) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;
     }
