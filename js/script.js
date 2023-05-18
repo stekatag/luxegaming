@@ -60,6 +60,27 @@ allLinks.forEach(function (link) {
   });
 });
 
+// Trending cards background image trick
+const trendingCardsItems = document.querySelectorAll(".trending-cards__item");
+const trendingCardsImgs = document.querySelectorAll(
+  ".trending-cards__img-container img"
+);
+
+const setBgImage = function () {
+  trendingCardsItems.forEach(function (card, i) {
+    // Get the image source and set it as the background image
+    const imageSource = trendingCardsImgs[i].getAttribute("src");
+    card.style.backgroundImage = `linear-gradient(
+      to right bottom,
+      rgba(255,255,255, 0.97),
+      rgba(238,238,238, 0.97)
+    ), url(${imageSource})`;
+  });
+};
+
+// Call the function
+setBgImage();
+
 const swiper = new Swiper(".trending-cards-content", {
   // Optional parameters
   direction: "horizontal",

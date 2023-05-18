@@ -171,7 +171,8 @@ em {
       grid-template-columns: 1fr; } }
   .categories .category {
     background-color: #581adf;
-    border-radius: 25px; }
+    border-radius: 25px;
+    transition: all 0.2s; }
     .categories .category__title {
       font-size: 1.7rem;
       font-weight: 600;
@@ -182,6 +183,10 @@ em {
       width: 100%;
       display: block;
       border-radius: 25px; }
+    .categories .category:hover {
+      background-color: #7948e5;
+      transform: scale(1.015) translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .cta {
   padding: 7.2rem;
@@ -360,7 +365,8 @@ em {
       grid-template-columns: 1fr; } }
   .top-games-cards .top-games-card {
     border-radius: 25px;
-    background-color: #fff; }
+    background-color: #fff;
+    transition: all 0.2s ease-in-out; }
     .top-games-cards .top-games-card__img-container {
       position: relative; }
       .top-games-cards .top-games-card__img-container img {
@@ -378,6 +384,8 @@ em {
       top: 100%;
       left: 50%;
       transform: translate(-50%, -50%); }
+    .top-games-cards .top-games-card:hover {
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15); }
 
 .trending-cards-slider {
   position: relative; }

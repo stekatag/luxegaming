@@ -15,6 +15,7 @@
   .category {
     background-color: $color-primary;
     border-radius: $default-border-radius;
+    transition: all 0.2s;
 
     &__title {
       font-size: 1.7rem;
@@ -28,6 +29,12 @@
       width: 100%;
       display: block;
       border-radius: $default-border-radius;
+    }
+
+    &:hover {
+      background-color: $color-primary-light;
+      transform: scale(1.015) translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
   }
 }
