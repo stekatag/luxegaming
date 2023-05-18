@@ -1,0 +1,50 @@
+.top-games-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 2rem;
+  row-gap: 6rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .top-games-card {
+    border-radius: $default-border-radius;
+    background-color: $color-white;
+
+    &__img-container {
+      position: relative;
+
+      & img {
+        display: block;
+        width: 100%;
+        border-radius: $default-border-radius;
+      }
+    }
+
+    &__info {
+      padding: 2rem 1.6rem 4rem;
+      position: relative;
+      text-align: center;
+
+      .card-category {
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

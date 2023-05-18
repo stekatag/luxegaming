@@ -1,0 +1,29 @@
+.search-form {
+  max-width: 48rem;
+  position: relative;
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.4rem;
+    outline: none;
+    border-radius: $default-border-radius;
+    max-width: 48rem;
+    width: 100%;
+    height: 5rem;
+    background-color: $color-white;
+    border: none;
+    padding: 0 2.4rem;
+    color: $color-grey-dark-1;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 5rem;
+
+    &:hover {
+      transform: translate(0);
+    }
+  }
+}

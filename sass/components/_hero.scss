@@ -1,0 +1,98 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 4.8rem;
+
+    &:first-child {
+      text-align: center;
+      max-width: 80rem;
+    }
+  }
+
+  &__subheading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-grey-light-2;
+    margin-bottom: 1.6rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: $color-grey-light-2;
+    margin-bottom: 6.4rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__img-container {
+    justify-self: end;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 75%;
+    }
+
+    @include respond(tab-port) {
+      width: auto;
+      justify-self: center;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: $default-border-radius;
+
+    &-price {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      border-radius: $default-border-radius;
+      background-color: $color-primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-white;
+      padding: 0.6rem 1.9rem;
+    }
+
+    &-offer {
+      position: absolute;
+      left: -25px;
+      bottom: -25px;
+      border-radius: 50%;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary,
+        $color-secondary-dark-2
+      );
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .search-form {
+    @include respond(tab-port) {
+      margin: 0 auto;
+    }
+  }
+}

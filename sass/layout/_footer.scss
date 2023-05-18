@@ -1,0 +1,27 @@
+.footer {
+  background-image: url(../img/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15rem;
+  border-radius: 15rem 15rem 0 0;
+
+  @include respond(tab-port) {
+    border-radius: 10rem 10rem 0 0;
+  }
+
+  @include respond(phone) {
+    border-radius: 5.5rem 5.5rem 0 0;
+  }
+
+  &__description {
+    text-align: center;
+    line-height: 9rem;
+    color: $color-white;
+    font-size: 1.6rem;
+
+    @include respond(phone) {
+      line-height: normal;
+      padding-top: 2.8rem;
+    }
+  }
+}

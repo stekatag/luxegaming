@@ -1,0 +1,72 @@
+.section-hero {
+  background-image: url(../img/hero-bg.jpg);
+  border-radius: 0 0 15rem 15rem;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 16.5rem 0;
+
+  @include respond(tab-port) {
+    padding: 12.8rem 0;
+    border-radius: 0 0 10rem 10rem;
+  }
+
+  @include respond(phone) {
+    padding: 9.6rem 0;
+    border-radius: 0 0 5.5rem 5.5rem;
+  }
+}
+
+.section-trending {
+  padding: 12.8rem 3.2rem;
+
+  @include respond(tab-land) {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+.section-top-games {
+  padding: 9.6rem 3.2rem 12.8rem;
+  background-color: $color-grey-light-1;
+  border-radius: $lg-border-radius;
+
+  @include respond(tab-land) {
+    border-radius: 10rem;
+  }
+
+  @include respond(phone) {
+    border-radius: 5.5rem;
+    padding: 9.6rem 0 9.6rem 0;
+  }
+}
+
+.section-categories {
+  padding: 9.6rem 3.2rem 16.4rem;
+
+  @include respond(tab-land) {
+    padding: 9.6rem 3.2rem;
+  }
+
+  .categories-info {
+    text-align: center;
+  }
+}
+
+.section-cta {
+  position: relative;
+  padding: 9.6rem 3.2rem 12.8rem;
+
+  display: flex;
+  gap: 24rem;
+  align-items: last baseline;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    align-items: center;
+    gap: 6.4rem;
+  }
+
+  @include respond(phone) {
+    padding: 9.6rem 3.2rem;
+  }
+}

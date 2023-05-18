@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    // width < 1100?
+    font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 68.75%; // 1rem = 11px; 11px/16px = 68.75%
+  }
+
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

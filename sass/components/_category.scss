@@ -1,0 +1,33 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2.8rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .category {
+    background-color: $color-primary;
+    border-radius: $default-border-radius;
+
+    &__title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: $color-white;
+      text-align: center;
+      padding: 2.2rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: $default-border-radius;
+    }
+  }
+}

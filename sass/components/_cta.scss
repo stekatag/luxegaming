@@ -1,0 +1,78 @@
+.cta {
+  padding: 7.2rem;
+  background-color: $color-grey-light-1;
+  border-radius: $default-border-radius;
+
+  .heading-secondary {
+    margin-bottom: 3.8rem;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: $color-grey-dark-1;
+    margin-bottom: 3.6rem;
+  }
+}
+
+.cta-shop {
+  max-width: 50rem;
+
+  @include respond(tab-land) {
+    max-width: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 60%,
+        transparent 60%
+      ),
+      url(../img/cta-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .cta__description,
+    .heading-secondary {
+      width: 60%;
+    }
+  }
+
+  @include respond(phone) {
+    background-image: none;
+
+    .cta__description,
+    .heading-secondary {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-image: url(../img/cta-bg.jpg);
+    background-repeat: no-repeat;
+    border-radius: $default-border-radius;
+    max-width: 55rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-27rem);
+    z-index: -1;
+
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+}
+
+.cta-news {
+  .search-form__btn {
+    text-align: right;
+    position: static;
+    margin-top: 1.4rem;
+  }
+}

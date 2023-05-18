@@ -1,0 +1,45 @@
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-layout-info {
+  .subheading {
+    grid-column: 1 / span 2;
+  }
+
+  .btn {
+    justify-self: end;
+    align-self: baseline;
+  }
+
+  @include respond(phone) {
+    justify-items: center;
+
+    .heading-secondary {
+      margin-bottom: 2.6rem;
+      grid-column: 1 / span 2;
+    }
+
+    .btn {
+      justify-self: center;
+      grid-column: 1 / span 2;
+      margin-bottom: 3.6rem;
+    }
+  }
+}

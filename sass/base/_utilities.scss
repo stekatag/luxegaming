@@ -1,0 +1,13 @@
+.price {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border-radius: $sm-border-radius;
+  background-color: $color-primary-light;
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $color-white;
+  padding: 0.6rem 1.6rem;
+}
