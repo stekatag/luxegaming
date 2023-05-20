@@ -1,0 +1,32 @@
+.section-page-heading {
+  background-image: url(../img/page-heading-bg.jpg);
+  border-radius: 0 0 15rem 15rem;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 18.5rem 0 10.8rem;
+
+  @include respond(tab-port) {
+    padding: 16.5rem 0 9.6rem;
+    border-radius: 0 0 10rem 10rem;
+  }
+
+  @include respond(phone) {
+    padding: 12.8rem 0 7.2rem;
+    border-radius: 0 0 5.5rem 5.5rem;
+  }
+
+  .page-heading {
+    text-align: center;
+
+    .heading-primary {
+      margin-bottom: 2.4rem;
+    }
+
+    .breadcrumb {
+      font-size: 1.6rem;
+      color: $color-white;
+      justify-content: center;
+    }
+  }
+}
