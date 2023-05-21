@@ -1,8 +1,12 @@
 .product-details {
   background-color: $color-grey-light-1;
   border-radius: $default-border-radius;
-  padding: 5.5rem;
+  padding: 7.2rem;
   transition: all 0.25s ease-in-out;
+
+  @include respond(phone) {
+    padding: 5.5rem;
+  }
 
   .nav-link {
     border: none;
@@ -21,6 +25,10 @@
       border-right: 1px solid $color-grey-light-3;
       margin-right: 3rem;
       padding-right: 3rem;
+
+      @include respond(phone) {
+        border-right: none;
+      }
 
       &:last-child {
         border-right: none;

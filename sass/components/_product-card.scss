@@ -50,6 +50,12 @@
     gap: 1.8rem;
     margin-bottom: 3.8rem;
 
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.4rem;
+    }
+
     &-btn:hover {
       color: $color-white;
       transform: translate(0);

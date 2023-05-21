@@ -401,6 +401,11 @@ em {
     align-items: center;
     gap: 1.8rem;
     margin-bottom: 3.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .product-card__form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.4rem; } }
     .product-card__form-btn:hover {
       color: #fff;
       transform: translate(0); }
@@ -435,8 +440,11 @@ em {
 .product-details {
   background-color: #f7f7f7;
   border-radius: 25px;
-  padding: 5.5rem;
+  padding: 7.2rem;
   transition: all 0.25s ease-in-out; }
+  @media only screen and (max-width: 37.5em) {
+    .product-details {
+      padding: 5.5rem; } }
   .product-details .nav-link {
     border: none;
     border-radius: 0;
@@ -451,6 +459,9 @@ em {
       border-right: 1px solid #d7d7d7;
       margin-right: 3rem;
       padding-right: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .product-details .nav-tabs li {
+          border-right: none; } }
       .product-details .nav-tabs li:last-child {
         border-right: none;
         margin-right: 0;
