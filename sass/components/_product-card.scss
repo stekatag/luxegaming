@@ -1,0 +1,91 @@
+.product-card {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  column-gap: 7.2rem;
+  align-items: flex-start;
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: $default-border-radius;
+  }
+
+  &__info {
+    .price {
+      position: static;
+      display: block;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: 0 0 0;
+      background-color: transparent;
+      color: $color-primary;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 3.6rem;
+
+      em {
+        color: $color-grey-dark-2;
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 3.6rem;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 3.8rem;
+
+    &-btn:hover {
+      color: $color-white;
+      transform: translate(0);
+    }
+  }
+
+  &__form-group {
+    display: flex;
+    align-items: center;
+
+    label {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $color-grey-dark-2;
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__quantity {
+    font-size: 1.5rem;
+    padding: 1rem 2.2rem;
+    border-radius: $default-border-radius;
+    border: 1px solid $color-grey-light-2;
+    background-color: $color-grey-light-1;
+    color: $color-grey-dark-2;
+    margin-right: 1.2rem;
+    width: 8.5rem;
+    text-align: center;
+  }
+
+  &__tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 20rem));
+    row-gap: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  &__tag-category {
+    color: $color-grey-dark-2;
+  }
+
+  &__tag {
+    color: $color-primary;
+  }
+}

@@ -54,6 +54,11 @@ a {
   text-decoration: none;
   color: inherit; }
 
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.45rem rgba(88, 26, 223, 0.4);
+  transition: all 0.2s; }
+
 body {
   font-family: "Poppins", sans-serif;
   color: #1e1e1e;
@@ -83,6 +88,13 @@ body {
   @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       margin-bottom: 4.8rem; } }
+
+.heading-tertiary {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 1.6rem;
+  text-transform: capitalize; }
 
 .subheading {
   color: #ee626b;
@@ -349,6 +361,101 @@ em {
       font-size: 1.6rem;
       color: #fff;
       justify-content: center; }
+
+.product-card {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  column-gap: 7.2rem;
+  align-items: flex-start; }
+  .product-card__img {
+    display: block;
+    width: 100%;
+    border-radius: 25px; }
+  .product-card__info .price {
+    position: static;
+    display: block;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0 0 0;
+    background-color: transparent;
+    color: #581adf;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 3.6rem; }
+    .product-card__info .price em {
+      color: #7a7a7a;
+      display: inline-block;
+      font-size: 1.8rem;
+      margin-right: 0.8rem; }
+  .product-card__description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 3.6rem; }
+  .product-card__form {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 3.8rem; }
+    .product-card__form-btn:hover {
+      color: #fff;
+      transform: translate(0); }
+  .product-card__form-group {
+    display: flex;
+    align-items: center; }
+    .product-card__form-group label {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #7a7a7a;
+      margin-right: 1.2rem; }
+  .product-card__quantity {
+    font-size: 1.5rem;
+    padding: 1rem 2.2rem;
+    border-radius: 25px;
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    color: #7a7a7a;
+    margin-right: 1.2rem;
+    width: 8.5rem;
+    text-align: center; }
+  .product-card__tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 20rem));
+    row-gap: 1.2rem;
+    font-size: 1.4rem; }
+  .product-card__tag-category {
+    color: #7a7a7a; }
+  .product-card__tag {
+    color: #581adf; }
+
+.product-details {
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  padding: 5.5rem;
+  transition: all 0.25s ease-in-out; }
+  .product-details .nav-link {
+    border: none;
+    border-radius: 0;
+    background-color: transparent !important;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    padding: 0; }
+  .product-details .nav-tabs {
+    border-bottom: none; }
+    .product-details .nav-tabs li {
+      border-right: 1px solid #d7d7d7;
+      margin-right: 3rem;
+      padding-right: 3rem; }
+      .product-details .nav-tabs li:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0; }
+    .product-details .nav-tabs .nav-link.active {
+      color: #581adf; }
+  .product-details .tab-content {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    color: #4a4a4a; }
 
 .search-form {
   max-width: 48rem;
@@ -744,3 +851,14 @@ em {
       width: 100%;
       height: 100%;
       margin-bottom: 2.4rem; }
+
+.section-product-card {
+  padding: 12.8rem 3.2rem; }
+  .section-product-card .divider {
+    width: 100%;
+    height: 1px;
+    color: #7a7a7a;
+    margin: 7.2rem 0; }
+
+.section-related-games {
+  padding: 0 3.2rem 16.5rem 3.2rem; }
