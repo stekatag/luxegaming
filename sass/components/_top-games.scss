@@ -14,6 +14,7 @@
 
   @include respond(phone) {
     grid-template-columns: 1fr;
+    padding: 0 3.2rem;
   }
 
   .top-games-card {
