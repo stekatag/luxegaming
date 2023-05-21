@@ -72,6 +72,8 @@ const filterEventsList = new Isotope(shopCards, {
 });
 
 filtersEl.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("shop-filter-btns__btn")) return;
+
   const filterValue = e.target.getAttribute("data-filter");
   const btnActive = filtersEl.querySelector(".shop-filter-btns__btn--active");
 
