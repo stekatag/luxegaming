@@ -1,7 +1,9 @@
 "use strict";
 
+//////////////////////////////////
 // Sticky navigation
 const sectionHeroEl = document.querySelector(".section-hero");
+const sectionPageHeadingEl = document.querySelector(".section-page-heading");
 const logoEl = document.querySelector(".logo");
 const wrapperEl = document.querySelector(".wrapper");
 
@@ -22,8 +24,9 @@ const obs = new IntersectionObserver(
     rootMargin: "-60px",
   }
 );
-obs.observe(sectionHeroEl);
+obs.observe(sectionHeroEl || sectionPageHeadingEl);
 
+//////////////////////////////////
 // Making the mobile navigation work
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -32,12 +35,12 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
-// Button scrolling
+//////////////////////////////////
+// Smooth scrolling animation
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    // e.preventDefault();
     const href = link.getAttribute("href");
 
     // Scroll back to top
@@ -60,6 +63,7 @@ allLinks.forEach(function (link) {
   });
 });
 
+//////////////////////////////////
 // Trending cards background image trick
 const trendingCardsItems = document.querySelectorAll(".trending-cards__item");
 const trendingCardsImgs = document.querySelectorAll(
@@ -79,42 +83,76 @@ const setBgImage = function () {
 };
 
 // Call the function
-setBgImage();
+sectionHeroEl && setBgImage();
 
-const swiper = new Swiper(".trending-cards-content", {
-  // Optional parameters
-  direction: "horizontal",
-  slidesPerView: 4,
-  spaceBetween: 25,
-  loop: true,
-  fade: true,
-  autoplay: {
-    delay: 2500,
-  },
+//////////////////////////////////
+// Carousel
+const trendingCardsEl = document.querySelector(".trending-cards-content");
+if (trendingCardsEl) {
+  const swiper = new Swiper(trendingCardsEl, {
+    // Optional parameters
+    direction: "horizontal",
+    slidesPerView: 4,
+    spaceBetween: 25,
+    loop: true,
+    fade: true,
+    autoplay: {
+      delay: 2500,
+    },
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".trending-button-next",
-    prevEl: ".trending-button-prev",
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".trending-button-next",
+      prevEl: ".trending-button-prev",
+    },
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      570: {
+        slidesPerView: 2,
+      },
+      780: {
+        slidesPerView: 3,
+      },
+      1250: {
+        slidesPerView: 4,
+      },
     },
-    570: {
-      slidesPerView: 2,
+  });
+}
+
+//////////////////////////////////
+// Category filter
+const shopCards = document.querySelector(".shop-cards");
+const filtersEl = document.querySelector(".shop-filter-btns");
+
+if (shopCards) {
+  const filterEventsList = new Isotope(shopCards, {
+    itemSelector: ".trending-cards__item",
+    masonry: {
+      isFitWidth: true,
     },
-    780: {
-      slidesPerView: 3,
-    },
-    1250: {
-      slidesPerView: 4,
-    },
-  },
-});
+  });
+
+  filtersEl.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("shop-filter-btns__btn")) return;
+
+    const filterValue = e.target.getAttribute("data-filter");
+    const btnActive = filtersEl.querySelector(".shop-filter-btns__btn--active");
+
+    filterEventsList.arrange({
+      filter: filterValue,
+    });
+
+    btnActive.classList.remove("shop-filter-btns__btn--active");
+    e.target.classList.add("shop-filter-btns__btn--active");
+    e.preventDefault();
+  });
+}
