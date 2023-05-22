@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FONT AWESOME ICONS -->
+    <script
+      src="https://kit.fontawesome.com/f55cff69b7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/contact.js"></script>
+    <title>LuxeGaming - Contact us</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ================= HEADER ================= -->
+      <header class="header-area">
+        <div class="header container">
+          <a href="#">
+            <img class="header__logo" src="img/logo-light.png" alt="logo" />
+          </a>
+
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li>
+                <a class="main-nav__link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="main-nav__link" href="shop.html">Our Shop</a>
+              </li>
+              <li>
+                <a class="main-nav__link" href="product.html"
+                  >Product Details</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav__link main-nav__link--active"
+                  href="contact.html"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a class="main-nav__link main-nav__link--cta" href="#cta"
+                  >Sign in</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <button class="btn-mobile-nav">
+            <i class="fa fa-bars icon-mobile-nav icon-mobile-nav__menu"></i>
+            <i class="fa fa-xmark icon-mobile-nav icon-mobile-nav__close"></i>
+          </button>
+        </div>
+      </header>
+      <!-- ================= MAIN ================= -->
+      <main>
+        <!-- ================= PAGE HEADING ================= -->
+        <section class="section-page-heading">
+          <div class="page-heading container">
+            <h2 class="heading-primary">Contact us</h2>
+            <span class="breadcrumb"
+              ><a href="index.html">Home</a> &gt; Contact us</span
+            >
+          </div>
+        </section>
+        <!-- ================= CONTACT ================= -->
+        <section class="section-contact container">
+          <div class="contact-info">
+            <h3 class="subheading">Contact us</h3>
+            <h2 class="heading-secondary">Get in touch</h2>
+            <p class="contact-info__description">
+              The Luxegaming contact form is your direct line of communication
+              for all your gaming needs. Contact us effortlessly for inquiries,
+              support, or anything else related to our premium digital gaming
+              offerings, and our dedicated team will be delighted to assist you.
+            </p>
+            <address class="contact-info__info">
+              <h4 class="contact-info__info-heading">Address</h4>
+              <span class="contact-info__info-text"
+                >67 Hristo Botev, Plovdiv, Bulgaria</span
+              >
+              <h4 class="contact-info__info-heading">Phone</h4>
+              <span class="contact-info__info-text">+359 88 888 8888</span>
+              <h4 class="contact-info__info-heading">Email</h4>
+              <span class="contact-info__info-text"
+                >luxegaming@contact.com</span
+              >
+            </address>
+          </div>
+          <form action="#" class="contact-form">
+            <div>
+              <label for="name" class="contact-form__label">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                class="contact-form__input"
+                placeholder="Dwayne Johnson"
+              />
+            </div>
+            <div>
+              <label for="email" class="contact-form__label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="contact-form__input"
+                placeholder="me@example.com"
+              />
+            </div>
+            <div class="contact-form__subject">
+              <label for="subject" class="contact-form__label">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                class="contact-form__input"
+                placeholder="I want my money back..."
+              />
+            </div>
+            <div class="contact-form__message">
+              <label for="message" class="contact-form__label">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                class="contact-form__textarea"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn contact-form__btn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Send message
+            </button>
+          </form>
+        </section>
+      </main>
+      <!-- ================= FOOTER ================= -->
+      <footer class="footer">
+        <p class="container footer__description">
+          Copyright &copy; 2023 Stefan Gogov. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

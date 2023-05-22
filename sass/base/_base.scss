@@ -47,7 +47,8 @@ a {
   color: inherit;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 0 0.45rem rgba($color-primary, $alpha: 0.4);
   transition: all 0.2s;

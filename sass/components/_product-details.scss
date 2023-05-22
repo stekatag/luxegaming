@@ -8,6 +8,10 @@
     padding: 5.5rem;
   }
 
+  @include respond(small-phone) {
+    padding: 3.2rem;
+  }
+
   .nav-link {
     border: none;
     border-radius: 0;

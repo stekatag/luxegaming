@@ -17,6 +17,10 @@
     padding: 0 3.2rem;
   }
 
+  @include respond(small-phone) {
+    padding: 0;
+  }
+
   .top-games-card {
     border-radius: $default-border-radius;
     background-color: $color-white;
