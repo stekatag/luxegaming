@@ -1,6 +1,14 @@
 "use strict";
 
 //////////////////////////////////
+// Preloader
+const preloaderEl = document.querySelector("#js-preloader");
+
+window.addEventListener("load", function () {
+  preloaderEl.classList.add("loaded");
+});
+
+//////////////////////////////////
 // Sticky navigation
 const sectionHeroEl = document.querySelector(".section-hero");
 const sectionPageHeadingEl = document.querySelector(".section-page-heading");
