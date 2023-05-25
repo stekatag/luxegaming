@@ -990,6 +990,8 @@ em {
 
 .section-related-games {
   padding: 0 3.2rem 16.5rem 3.2rem; }
+  .section-related-games .top-games-card {
+    background-color: #f7f7f7; }
 
 .section-contact {
   padding: 9.6rem 3.2rem;
