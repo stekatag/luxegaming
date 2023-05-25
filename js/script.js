@@ -44,6 +44,12 @@ btnNavEl.addEventListener("click", function () {
 });
 
 //////////////////////////////////
+// Getting the current year and setting it in the footer
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+//////////////////////////////////
 // Smooth scrolling animation
 const allLinks = document.querySelectorAll("a:link");
 
